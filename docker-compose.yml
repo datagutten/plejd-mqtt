@@ -1,7 +1,6 @@
 services:
   plejd:
-    build:
-      context: .
+    image: ghcr.io/datagutten/plejd-mqtt:latest
 
     volumes:
       - ./data:/data
