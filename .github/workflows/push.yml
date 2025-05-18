@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     name: Obtain hassio-plejd Version
     outputs:
-      build-version: ${{ steps.set-version.outputs.build_version }}
+      build-version: ${{ steps.set-version.outputs.package_version }}
     steps:
     - name: Checkout repository
       uses: actions/checkout@v4
