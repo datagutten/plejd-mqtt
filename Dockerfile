@@ -24,6 +24,9 @@ WORKDIR /hassio-plejd/plejd
 RUN npm install
 
 FROM node:24-alpine
+LABEL org.opencontainers.image.source=https://github.com/datagutten/plejd-mqtt
+LABEL org.opencontainers.image.description="A docker image to run icanos/hassio-plejd standalone without Home Assistant"
+
 COPY --from=builder /hassio-plejd/plejd /plejd
 
 CMD ["node", "/plejd/main.js"]
