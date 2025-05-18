@@ -1,0 +1,8 @@
+services:
+  plejd:
+    build:
+      context: .
+
+    volumes:
+      - ./data:/data
+      - /var/run/dbus/system_bus_socket:/var/run/dbus/system_bus_socket
